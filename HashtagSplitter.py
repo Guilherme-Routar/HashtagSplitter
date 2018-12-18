@@ -24,28 +24,9 @@ class HashtagSplitter():
             raise ValueError('Invalid input. Try a valid language or dictionary.')
             
     '''
+    # Meant to automatize the whole data import process
     def data_builder(self, corpora, alphabet):
-        
-        # Initializing list of words
-        self.word_list = []
-        
-        # Downloading corpora
-        for corpus in corpora:
-            nltk.download(corpus, quiet=True)
-            self.word_list.extend(corpus)
-        
-        # Building list of words
-        for corpus in corpora:
-            self.words_list += list(set(corpus.words))
-        
-        # Ignoring chars which aren't considered words
-        for char in alphabet:
-            if char in self.words_list:
-                self.words_list.remove(char)
-        
-        print(len(self.words_list))
-        
-    #print(splitter.data_builder(['brown', 'words'], "bcdefghjklmnopqrstuvwxyz"))
+        # TO BE IMPLEMENTED
     '''
         
     
